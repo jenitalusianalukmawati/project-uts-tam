@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/register">
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.jenita.project.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/register"
+        android:name="com.jenita.project.register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_login2"
+            app:destination="@id/login2" />
+    </fragment>
+    <fragment
+        android:id="@+id/riwayat2"
+        android:name="com.jenita.project.riwayat"
+        android:label="fragment_riwayat"
+        tools:layout="@layout/fragment_riwayat" />
+    <fragment
+        android:id="@+id/book_kereta"
+        android:name="com.jenita.project.book_kereta"
+        android:label="fragment_book_kereta"
+        tools:layout="@layout/fragment_book_kereta" />
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.jenita.project.dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboard_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_dashboard_to_riwayat2"
+            app:destination="@id/riwayat2" />
+        <action
+            android:id="@+id/action_dashboard_to_book_kereta"
+            app:destination="@id/book_kereta" />
+    </fragment>
+    <fragment
+        android:id="@+id/login2"
+        android:name="com.jenita.project.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login2_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+</navigation>
